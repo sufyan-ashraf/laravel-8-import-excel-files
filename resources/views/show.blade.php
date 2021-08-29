@@ -3,7 +3,7 @@
 
 <div class="mt-5">
     <div class="ml-3">
-        <a href="{{ route('files.index') }}" class="btn btn-outline-dark">Back</a>
+        <a href="{{ route('files.index') }}" class="btn btn-outline-dark  btn-loader">Back</a>
     </div>
     <div class="card-body">
         <h5 class="card-title">{{$file->name}}</h5>

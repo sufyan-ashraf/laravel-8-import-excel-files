@@ -34,12 +34,7 @@ class FileService extends Controller {
     public function get($search, $id, $repository)
     {
         $file = $repository->findById($id,['*'],['headings']);
-
-        $data = $this->rowRepository->withPagination(
-            isset($search['skip'])?$search['skip']:0,
-            isset($search['take'])?$search['take']:15,
-            ['file_id'=>$id], ['*'], ['rowsData']);
-
+        $data = $this->rowRepository->withPagination(['file_id'=>$id], ['*'], ['rowsData']);
         $data['file'] = $file;
 
         return view('show', $data);

@@ -160,8 +160,6 @@ class BaseRepository implements EloquentRepositoryInterface
      * @return Model
      */
     public function withPagination(
-        int $skip = 0,
-        int $take = 15,
         array $conditions,
         array $columns = ['*'],
         array $relations = []
